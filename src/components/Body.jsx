@@ -1,15 +1,21 @@
 import React,{useState} from 'react';
-import Button from './Button';
-
+import AddIcon from '@material-ui/icons/Add';
+import SyncIcon from '@material-ui/icons/Sync';
+import RemoveIcon from '@material-ui/icons/Remove';
 function Body(){
 
   const [number,setNumber] = useState(0);
+
+  const clickButtonStyles = {
+    marginTop:"25px"
+  }
+
   function increase(){
     setNumber(
       number + 1
     )
   }
-  function makeZero(){
+  function reset(){
     setNumber(0);
   }
   function decrease(){
@@ -20,23 +26,27 @@ function Body(){
   return (
     <div>
     <div className="numberDiv">
-    <span> {number} </span>
+    <p> {number} </p>
      </div>
-     <center><Button
-     simpleMath={increase}
-     icon={"+"}
-     color={"#baf1a1"}
-      />
-      <Button
-       simpleMath={makeZero}
-      icon={"reset"}
-      color={"#ecce6d"}
-       />
-       <Button
-        simpleMath={decrease}
-       icon={"-"}
-       color={"#c81912"}
-        /> </center>
+
+<center>
+
+<div className="buttonDiv" style={ {backgroundColor:"#21bf73",color:"white"} }onClick={()=> {
+increase();
+}}>
+<AddIcon style={clickButtonStyles} />
+ </div>
+ <div className="buttonDiv" style={ {backgroundColor:"#feb72b",color:"black"} }onClick={()=> {
+ reset();
+ }}>
+ <SyncIcon style={clickButtonStyles} />
+  </div>
+  <div className="buttonDiv" style={ {backgroundColor:"#fd5e53",color:"white"} }onClick={()=> {
+  decrease();
+  }}>
+  <RemoveIcon style={clickButtonStyles} />
+   </div>
+</center>
 
      </div>
   );

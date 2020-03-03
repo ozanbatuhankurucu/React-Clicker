@@ -25,20 +25,18 @@ footer p {
 .numberDiv{
   text-align: center;
   background-color: lightgrey;
-  width: 120px;
-  height:100px;
+  width: 240px;
+  height:240px;
   border: 5px solid #a1e6e3;
-  padding: 50px;
   margin: 0em auto;
-
 }
-span{
-  font-size: 22px;
+.numberDiv p{
+  font-size: 42px;
   font-weight: bold;
+  margin-top:100px;
 }
 .buttonDiv{
-  height: 40px;
-  width: 77px;
-  text-align: center;
- display: inline-block;
+  height: 80px;
+  width: 83px;
+  display: inline-block;
 }
